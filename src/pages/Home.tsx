@@ -10,7 +10,9 @@ import {
   IonRefresherContent,
   IonTitle,
   IonToolbar,
-  useIonViewWillEnter
+  useIonViewWillEnter,
+  IonItem,
+  IonLabel
 } from '@ionic/react';
 import './Home.css';
 
@@ -50,6 +52,11 @@ const Home: React.FC = () => {
         </IonHeader>
 
         <IonList>
+          <IonItem routerLink="/characters">
+            <IonLabel>
+              <h2>Futurama Characters</h2>
+            </IonLabel>
+          </IonItem>
           {messages.map(m => <MessageListItem key={m.id} message={m} />)}
         </IonList>
       </IonContent>
